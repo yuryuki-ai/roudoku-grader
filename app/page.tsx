@@ -1,4 +1,5 @@
 const mail = "roudokukentei@gmail.com";
+const assetBase = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 const qualifications = [
   {
@@ -56,9 +57,9 @@ export default function Home() {
     <main>
       <header className="siteHeader">
         <a className="brand" href="#top" aria-label="ページ上部へ">
-          <span className="logoCrop roudokuLogo"><img src="/roudoku-logo-transparent.png" alt="朗読検定" /></span>
+          <span className="logoCrop roudokuLogo"><img src={`${assetBase}/roudoku-logo-transparent.png`} alt="朗読検定" /></span>
           <span className="brandDivider" aria-hidden="true" />
-          <span className="logoCrop yomikenLogo"><img src="/yomiken-logo.png" alt="読み聞かせ検定" /></span>
+          <span className="logoCrop yomikenLogo"><img src={`${assetBase}/yomiken-logo.png`} alt="読み聞かせ検定" /></span>
         </a>
         <nav aria-label="ページ内ナビゲーション">
           <a href="#work">仕事の流れ</a>
@@ -205,9 +206,9 @@ export default function Home() {
 
       <footer>
         <div className="brand">
-          <span className="logoCrop roudokuLogo"><img src="/roudoku-logo-transparent.png" alt="朗読検定" /></span>
+          <span className="logoCrop roudokuLogo"><img src={`${assetBase}/roudoku-logo-transparent.png`} alt="朗読検定" /></span>
           <span className="brandDivider" aria-hidden="true" />
-          <span className="logoCrop yomikenLogo"><img src="/yomiken-logo.png" alt="読み聞かせ検定" /></span>
+          <span className="logoCrop yomikenLogo"><img src={`${assetBase}/yomiken-logo.png`} alt="読み聞かせ検定" /></span>
         </div>
         <p>© 一般社団法人日本朗読検定協会</p>
       </footer>
