@@ -196,7 +196,7 @@ export default function Home() {
       <section className="finalCta">
         <div className="quoteMark">“</div>
         <p className="eyebrow">TAKE THE FIRST STEP</p>
-        <h2>声を聴き、成長を支える。<br />その一歩を、今日から。</h2>
+        <h2>表現を聴き、成長を支える。<br />その一歩を、今日から。</h2>
         <p>資格選びのご相談から承ります。経験や現在のスキルに不安がある方も、まずはお気軽にご連絡ください。</p>
         <a className="primaryCta light" href={`mailto:${mail}?subject=採点者資格への申し込み・相談`}>
           メールで申し込み・相談 <span>→</span>
