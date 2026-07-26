@@ -1,0 +1,492 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ボイスバイエル・朗読プロ養成講座の受講生限定。自分の朗読を客観的に聴き、改善点を見つける力を養う一般朗読採点者資格のご案内です。">
+  <meta name="theme-color" content="#782f49">
+  <title>受講生限定｜一般朗読採点者資格</title>
+  <style>
+    :root {
+      --wine: #782f49;
+      --wine-dark: #522033;
+      --rose: #f7e9ed;
+      --rose-deep: #eed5dd;
+      --cream: #fffaf3;
+      --gold: #b5873d;
+      --ink: #30282b;
+      --muted: #6f6266;
+      --white: #fff;
+      --line: #e6d9dc;
+      --shadow: 0 18px 50px rgba(82,32,51,.12);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--cream);
+      font-family: "Yu Mincho", "Hiragino Mincho ProN", "Noto Serif JP", serif;
+      line-height: 1.9;
+      letter-spacing: .035em;
+    }
+    a { color: inherit; }
+    .wrap { width: min(1080px, calc(100% - 40px)); margin-inline: auto; }
+    .topbar {
+      padding: 10px 20px;
+      color: var(--white);
+      background: var(--wine-dark);
+      text-align: center;
+      font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+      font-size: 14px;
+      letter-spacing: .08em;
+    }
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 76px 0 84px;
+      background:
+        radial-gradient(circle at 12% 12%, rgba(181,135,61,.18), transparent 25%),
+        radial-gradient(circle at 90% 30%, rgba(120,47,73,.12), transparent 30%),
+        linear-gradient(135deg, #fffdf8 0%, #f8e9ee 100%);
+    }
+    .hero::after {
+      content: "聴";
+      position: absolute;
+      right: 2vw;
+      bottom: -130px;
+      color: rgba(120,47,73,.045);
+      font-size: clamp(300px, 42vw, 560px);
+      line-height: 1;
+      pointer-events: none;
+    }
+    .hero-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap: 56px;
+      align-items: center;
+    }
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 22px;
+      padding: 7px 16px;
+      border: 1px solid var(--wine);
+      border-radius: 999px;
+      color: var(--wine);
+      background: rgba(255,255,255,.62);
+      font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+    }
+    h1 {
+      margin: 0 0 24px;
+      color: var(--wine-dark);
+      font-size: clamp(34px, 5.2vw, 64px);
+      font-weight: 600;
+      line-height: 1.38;
+      letter-spacing: .06em;
+    }
+    h1 em {
+      color: var(--wine);
+      font-style: normal;
+      background: linear-gradient(transparent 72%, rgba(181,135,61,.23) 0);
+    }
+    .lead { margin: 0 0 30px; font-size: clamp(17px, 2vw, 21px); }
+    .lead strong { color: var(--wine); }
+    .cta {
+      display: inline-flex;
+      min-height: 58px;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 28px;
+      border-radius: 6px;
+      color: var(--white);
+      background: var(--wine);
+      box-shadow: 0 10px 24px rgba(120,47,73,.22);
+      font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform .2s, background .2s;
+    }
+    .cta:hover { background: var(--wine-dark); transform: translateY(-2px); }
+    .micro { margin-top: 12px; color: var(--muted); font-size: 13px; }
+    .offer {
+      position: relative;
+      padding: 34px 30px;
+      border: 1px solid rgba(181,135,61,.45);
+      border-radius: 16px;
+      background: rgba(255,255,255,.88);
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+    .offer-label {
+      position: absolute;
+      top: -16px;
+      left: 50%;
+      padding: 5px 20px;
+      border-radius: 999px;
+      color: var(--white);
+      background: var(--gold);
+      font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      transform: translateX(-50%);
+      white-space: nowrap;
+    }
+    .offer-name { margin: 8px 0 14px; color: var(--wine-dark); font-size: 19px; font-weight: 700; }
+    .regular { color: var(--muted); font-family: "Yu Gothic", sans-serif; }
+    .regular s { margin-left: 6px; }
+    .price { margin: 4px 0; color: var(--wine); font-size: 52px; font-weight: 700; line-height: 1.2; }
+    .price small { font-size: 19px; }
+    .saving {
+      display: inline-block;
+      padding: 3px 12px;
+      color: var(--wine);
+      background: var(--rose);
+      font-family: "Yu Gothic", sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+    }
+    .limited { margin: 22px 0 0; padding-top: 18px; border-top: 1px solid var(--line); font-weight: 700; }
+    .limited strong { color: var(--wine); font-size: 22px; }
+    section { padding: 88px 0; }
+    .white { background: var(--white); }
+    .rose { background: var(--rose); }
+    .section-label {
+      margin-bottom: 8px;
+      color: var(--gold);
+      font-family: "Yu Gothic", sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-align: center;
+    }
+    h2 {
+      margin: 0 0 44px;
+      color: var(--wine-dark);
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 600;
+      line-height: 1.5;
+      text-align: center;
+    }
+    .intro {
+      width: min(760px, 100%);
+      margin: 0 auto;
+      font-size: 18px;
+      text-align: center;
+    }
+    .intro strong { color: var(--wine); }
+    .worries {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin-top: 42px;
+    }
+    .worry {
+      position: relative;
+      margin: 0;
+      padding: 20px 24px 20px 52px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: var(--white);
+      box-shadow: 0 8px 24px rgba(82,32,51,.055);
+    }
+    .worry::before {
+      content: "✓";
+      position: absolute;
+      left: 22px;
+      color: var(--gold);
+      font-family: sans-serif;
+      font-weight: 800;
+    }
+    .three {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+    .card {
+      padding: 32px 26px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--white);
+      box-shadow: 0 8px 26px rgba(82,32,51,.06);
+    }
+    .num { color: var(--rose-deep); font-family: Georgia, serif; font-size: 42px; line-height: 1; }
+    .card h3 { margin: 15px 0 10px; color: var(--wine); font-size: 21px; }
+    .card p { margin: 0; }
+    .message {
+      width: min(840px, 100%);
+      margin: 0 auto;
+      padding: 44px;
+      border-left: 4px solid var(--gold);
+      background: var(--white);
+      box-shadow: var(--shadow);
+      font-size: 18px;
+    }
+    .message p:first-child { margin-top: 0; }
+    .message p:last-child { margin-bottom: 0; }
+    .details {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 38px;
+      align-items: start;
+    }
+    .detail-list { margin: 0; border-top: 1px solid var(--line); }
+    .detail-row {
+      display: grid;
+      grid-template-columns: 9em 1fr;
+      gap: 20px;
+      padding: 18px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .detail-row dt { color: var(--wine); font-weight: 700; }
+    .detail-row dd { margin: 0; }
+    .price-box {
+      padding: 36px;
+      border-radius: 14px;
+      color: var(--white);
+      background: var(--wine-dark);
+      text-align: center;
+    }
+    .price-box .regular { color: rgba(255,255,255,.72); }
+    .price-box .price { color: var(--white); }
+    .price-box .saving { color: var(--wine-dark); background: #f5deb0; }
+    .price-box .cta { margin-top: 22px; color: var(--wine-dark); background: var(--white); }
+    .price-box .micro { color: rgba(255,255,255,.72); }
+    .faq { width: min(860px, 100%); margin: 0 auto; }
+    details { border-bottom: 1px solid var(--line); background: var(--white); }
+    summary {
+      position: relative;
+      padding: 22px 54px 22px 20px;
+      color: var(--wine-dark);
+      font-weight: 700;
+      cursor: pointer;
+      list-style: none;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::after {
+      content: "+";
+      position: absolute;
+      right: 20px;
+      color: var(--wine);
+      font-family: sans-serif;
+      font-size: 24px;
+    }
+    details[open] summary::after { content: "−"; }
+    details p { margin: 0; padding: 0 20px 24px; }
+    .final {
+      padding: 92px 0;
+      color: var(--white);
+      background:
+        linear-gradient(rgba(82,32,51,.96), rgba(82,32,51,.96)),
+        radial-gradient(circle at center, #b5873d, transparent 55%);
+      text-align: center;
+    }
+    .final h2 { color: var(--white); margin-bottom: 24px; }
+    .final p { width: min(700px, 100%); margin: 0 auto 30px; font-size: 18px; }
+    .final .cta { color: var(--wine-dark); background: var(--white); }
+    footer {
+      padding: 28px 20px;
+      color: var(--muted);
+      background: #f4eee8;
+      text-align: center;
+      font-family: "Yu Gothic", sans-serif;
+      font-size: 13px;
+    }
+    @media (max-width: 800px) {
+      .hero { padding: 58px 0 68px; }
+      .hero-grid, .details { grid-template-columns: 1fr; }
+      .hero-grid { gap: 46px; }
+      .worries, .three { grid-template-columns: 1fr; }
+      section { padding: 68px 0; }
+      .message { padding: 30px 24px; }
+    }
+    @media (max-width: 520px) {
+      .wrap { width: min(100% - 28px, 1080px); }
+      h1 { font-size: 35px; }
+      .offer { padding-inline: 20px; }
+      .price { font-size: 45px; }
+      .detail-row { grid-template-columns: 1fr; gap: 2px; }
+      .cta { width: 100%; padding-inline: 16px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .cta { transition: none; }
+    }
+  </style>
+</head>
+<body id="top">
+  <div class="topbar">ボイスバイエル・朗読プロ養成講座　受講生限定のご案内</div>
+
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">日本朗読検定協会 認定</span>
+        <h1>「読む力」に、<br><em>自分で見抜く力</em>を。</h1>
+        <p class="lead">
+          採点者の視点を学ぶことで、自分の課題音源を客観的に聴き、改善点を見つける。<br>
+          <strong>思い描いた表現へ、自分の力で近づくための資格です。</strong>
+        </p>
+        <a class="cta" href="mailto:roudokukentei@gmail.com?subject=受講生限定・一般朗読採点者資格への申し込み・相談">受講生限定枠に申し込む →</a>
+        <div class="micro">ご質問だけでも歓迎です。メールでお気軽にご相談ください。</div>
+      </div>
+
+      <aside class="offer" aria-label="受講生限定価格">
+        <div class="offer-label">受講生限定・先着5名</div>
+        <div class="offer-name">一般朗読採点者資格</div>
+        <div class="regular">通常受講料 <s>55,000円</s></div>
+        <div class="price">44,000<small>円（税込）</small></div>
+        <div class="saving">11,000円割引</div>
+        <div class="limited">定員は <strong>5名</strong> です</div>
+      </aside>
+    </div>
+  </header>
+
+  <main>
+    <section class="white">
+      <div class="wrap">
+        <div class="section-label">DOES THIS SOUND FAMILIAR?</div>
+        <h2>録音を聴き返して、<br>こんなふうに迷っていませんか？</h2>
+        <p class="intro">
+          練習を重ねても、<strong>自分の朗読を自分で評価すること</strong>は簡単ではありません。
+          「何となく違う」を言葉にできると、練習の質が変わります。
+        </p>
+        <div class="worries">
+          <p class="worry">どこを直せば、もっと伝わるのか分からない</p>
+          <p class="worry">何度録り直しても、本当に良くなったか判断できない</p>
+          <p class="worry">思い通りに表現しているつもりなのに、評価につながらない</p>
+          <p class="worry">コンテストに出す前に、自分の朗読を客観的に確認したい</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="rose">
+      <div class="wrap">
+        <div class="section-label">THREE ABILITIES</div>
+        <h2>採点者の視点が、<br>日々の練習を変えていきます。</h2>
+        <div class="three">
+          <article class="card">
+            <div class="num">01</div>
+            <h3>聴く力</h3>
+            <p>間、テンポ、声の表現、作品理解など、評価の基準をもって音源を聴けるようになります。</p>
+          </article>
+          <article class="card">
+            <div class="num">02</div>
+            <h3>診断する力</h3>
+            <p>感覚的な「何となく」から一歩進み、表現のどこに課題があるのかを具体的に捉えます。</p>
+          </article>
+          <article class="card">
+            <div class="num">03</div>
+            <h3>直す力</h3>
+            <p>次の録音で何を変えるかが明確になり、限られた練習時間をより有効に使えます。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="white">
+      <div class="wrap">
+        <div class="section-label">FOR YOUR EXPRESSION</div>
+        <h2>採点者になるためだけの<br>講座ではありません。</h2>
+        <div class="message">
+          <p>
+            この講座で学ぶ評価基準は、誰かの朗読を採点するときだけでなく、
+            <strong>自分の課題音源を見直すとき</strong>にも活用できます。
+          </p>
+          <p>
+            ボイスバイエルや朗読プロ養成講座に、新しい朗読課題を追加するものではありません。
+            今取り組んでいる課題をより深く聴き、講師からのアドバイスを理解し、
+            自分が目指す表現へ近づくための「もう一つの視点」を身につけます。
+          </p>
+          <p>
+            年齢や経験を重ねてきた今だからこそ表現できる、言葉の深さがあります。
+            その魅力を聴く人へきちんと届け、自信をもって朗読できる自分を目指しませんか。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="rose">
+      <div class="wrap">
+        <div class="section-label">COURSE DETAILS</div>
+        <h2>一般朗読採点者資格<br>受講生限定募集</h2>
+        <div class="details">
+          <dl class="detail-list">
+            <div class="detail-row">
+              <dt>対象</dt>
+              <dd>ボイスバイエル・朗読プロ養成講座の受講生</dd>
+            </div>
+            <div class="detail-row">
+              <dt>対応範囲</dt>
+              <dd>朗読検定4級〜2級</dd>
+            </div>
+            <div class="detail-row">
+              <dt>研修</dt>
+              <dd>Zoom研修で採点基準と採点方法を学びます</dd>
+            </div>
+            <div class="detail-row">
+              <dt>募集人数</dt>
+              <dd>先着5名（定員に達し次第終了）</dd>
+            </div>
+            <div class="detail-row">
+              <dt>支払い</dt>
+              <dd>銀行振込またはクレジットカード</dd>
+            </div>
+          </dl>
+
+          <div class="price-box">
+            <div>受講生限定価格</div>
+            <div class="regular">通常 <s>55,000円</s></div>
+            <div class="price">44,000<small>円</small></div>
+            <div class="saving">11,000円割引・税込</div>
+            <a class="cta" href="mailto:roudokukentei@gmail.com?subject=受講生限定・一般朗読採点者資格への申し込み・相談">申し込み・相談をする →</a>
+            <div class="micro">メール画面が開きます</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="white">
+      <div class="wrap">
+        <div class="section-label">FAQ</div>
+        <h2>よくあるご質問</h2>
+        <div class="faq">
+          <details>
+            <summary>受講歴が浅くても大丈夫ですか？</summary>
+            <p>大丈夫です。決められた採点基準に沿って判断できるよう、Zoom研修で学びます。自分の音源をどこに注目して聴けばよいか分からない方にもおすすめです。</p>
+          </details>
+          <details>
+            <summary>今受けている講座に、さらに課題が増えますか？</summary>
+            <p>新しい朗読作品の課題を増やすことが目的ではありません。採点者資格で学ぶ「聴く視点」を、現在取り組んでいるボイスバイエルや朗読プロ養成講座の課題音源にも生かせます。</p>
+          </details>
+          <details>
+            <summary>資格を取れば、コンテストで成果を出せますか？</summary>
+            <p>コンテストの結果を保証する資格ではありません。ただし、評価する側の視点を学び、自分の朗読を客観的に見直せるようになることは、納得できる表現へ近づく助けになります。</p>
+          </details>
+          <details>
+            <summary>採点の仕事をする予定がなくても受講できますか？</summary>
+            <p>受講できます。採点業務だけでなく、自分の朗読を見直す力を身につけたい方にも活用していただける内容です。</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="final">
+      <div class="wrap">
+        <h2>自分の朗読を、<br>自分で磨ける人へ。</h2>
+        <p>
+          「上手くなりたい」という思いを、ただ何度も読む練習だけで終わらせない。
+          聴き、見極め、直す力を身につけて、あなたが思い描く表現へ一歩ずつ近づいてください。
+        </p>
+        <a class="cta" href="mailto:roudokukentei@gmail.com?subject=受講生限定・一般朗読採点者資格への申し込み・相談">先着5名の限定枠に申し込む →</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 一般社団法人日本朗読検定協会</p>
+  </footer>
+</body>
+</html>
