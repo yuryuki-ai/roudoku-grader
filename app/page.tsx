@@ -126,7 +126,7 @@ export default function Home() {
       <section className="qualitySection" aria-labelledby="quality-heading">
         <div className="qualityIntro">
           <p className="sectionLabel">TRIPLE REVIEW SYSTEM</p>
-          <h2 id="quality-heading">朗読検定は、<em>3名で採点</em>します。</h2>
+          <h2 id="quality-heading">朗読検定、読み聞かせ検定は、<em>3名で採点</em>します。</h2>
           <p>
             採点者は研修で採点基準をしっかり身につけます。
             さらに、2人目・3人目にはベテラン採点者を配置。
