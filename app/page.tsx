@@ -36,7 +36,7 @@ const qualifications = [
 const faqs = [
   {
     q: "経験が浅くても大丈夫ですか？",
-    a: "大丈夫です。採点基準に沿って判断するため、Zoom研修でゼロから丁寧にお教えします。",
+    a: "大丈夫です。Zoom研修で採点基準を丁寧に学び、実際の検定は3名で採点します。1人目の採点後、2人目・3人目にはベテラン採点者を配置して確認するため、一人の判断だけで採点結果が決まることはありません。",
   },
   {
     q: "採点料の目安を教えてください。",
@@ -80,9 +80,13 @@ export default function Home() {
           </h1>
           <p className="lead">
             朗読・読み聞かせ検定の採点を専業で担う、新しい資格です。
-            経験不問。Zoom研修と最初の1件の伴走サポートで、
-            安心して採点業務を始められます。
+            採点基準をしっかり研修し、検定は3名で採点。
+            2人目・3人目にはベテラン採点者を配置します。
           </p>
+          <div className="qualityPromise" aria-label="3名採点による品質管理">
+            <strong>一人の判断で決めません</strong>
+            <span>1人目の採点 ＋ ベテラン2名の確認</span>
+          </div>
           <div className="heroActions">
             <a className="primaryCta" href={`mailto:${mail}?subject=採点者資格への申し込み・相談`}>
               申し込み・相談をする <span>→</span>
@@ -115,8 +119,40 @@ export default function Home() {
 
       <section className="proofBand" aria-label="資格の特長">
         <div><strong>在宅で完結</strong><span>Gmail・Excelの基本操作のみ</span></div>
-        <div><strong>丁寧な研修</strong><span>Zoomでゼロからサポート</span></div>
-        <div><strong>仕事につながる</strong><span>資格に応じて案件を振り分け</span></div>
+        <div><strong>丁寧な基準研修</strong><span>Zoomでゼロからサポート</span></div>
+        <div><strong>3名で採点</strong><span>ベテラン2名が採点票を確認</span></div>
+      </section>
+
+      <section className="qualitySection" aria-labelledby="quality-heading">
+        <div className="qualityIntro">
+          <p className="sectionLabel">TRIPLE REVIEW SYSTEM</p>
+          <h2 id="quality-heading">朗読検定は、<em>3名で採点</em>します。</h2>
+          <p>
+            採点者は研修で採点基準をしっかり身につけます。
+            さらに、2人目・3人目にはベテラン採点者を配置。
+            複数の視点で採点票を確認することで、正確性と妥当性の高い採点を目指しています。
+          </p>
+        </div>
+        <div className="reviewFlow" aria-label="3名による採点の流れ">
+          <article className="reviewPrimary">
+            <span>1人目</span>
+            <strong>採点票を作成</strong>
+            <small>研修した採点基準に沿って採点</small>
+          </article>
+          <div className="reviewPlus" aria-hidden="true">＋</div>
+          <article>
+            <span>2人目</span>
+            <strong>ベテランが確認</strong>
+            <small>採点内容と基準への適合をチェック</small>
+          </article>
+          <div className="reviewPlus" aria-hidden="true">＋</div>
+          <article>
+            <span>3人目</span>
+            <strong>ベテランが確認</strong>
+            <small>複数の視点から最終チェック</small>
+          </article>
+        </div>
+        <p className="qualityConclusion">研修 × 3名採点で、採点の正確性・妥当性を支えます。</p>
       </section>
 
       <section className="section intro" id="work">
