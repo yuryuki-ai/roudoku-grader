@@ -189,6 +189,27 @@ h2 { font-family: "Yu Mincho", "Hiragino Mincho ProN", serif; font-size: clamp(3
 .featured .price strong { color: var(--orange); font-size: 44px; }
 .payment { color: var(--muted); font-size: 11px; text-align: right; }
 
+.compensation { background: #fff; }
+.compensationHeading { margin-bottom: 44px; }
+.feeTableWrap { border: 1px solid var(--line); overflow: hidden; }
+.feeTable { border-collapse: collapse; table-layout: fixed; width: 100%; }
+.feeTable th, .feeTable td { border-bottom: 1px solid var(--line); padding: 22px 24px; text-align: center; }
+.feeTable thead th { background: var(--ink); color: #fff; font-size: 12px; letter-spacing: .04em; }
+.feeTable tbody th { background: #edf3f1; color: var(--blue); font-family: serif; font-size: 21px; }
+.feeTable tbody td { color: var(--muted); font-size: 14px; }
+.feeTable tbody td strong { color: var(--orange); font-family: serif; font-size: 25px; }
+.feeTable tr:last-child th, .feeTable tr:last-child td { border-bottom: 0; }
+.feeNote { color: var(--muted); font-size: 11px; margin: 12px 0 0; }
+.distributionPanel { background: var(--cream); display: grid; gap: 5vw; grid-template-columns: .85fr 1.15fr; margin-top: 46px; padding: 42px; }
+.distributionIntro > span { color: var(--orange); font-size: 10px; font-weight: 800; letter-spacing: .18em; }
+.distributionIntro h3 { font-family: serif; font-size: 28px; line-height: 1.45; margin: 14px 0 16px; }
+.distributionIntro p { color: var(--muted); font-size: 12px; margin: 0; }
+.distributionRules { display: grid; gap: 10px; grid-template-columns: 1fr 1fr; }
+.distributionRules article { background: var(--paper); border-left: 4px solid var(--orange); display: flex; flex-direction: column; justify-content: center; min-height: 105px; padding: 18px 20px; }
+.distributionRules strong { font-size: 12px; }
+.distributionRules span { color: var(--blue); font-family: serif; font-size: 20px; font-weight: 700; margin-top: 4px; }
+.distributionLimit { color: var(--muted); font-size: 11px; font-weight: 700; margin: 10px 0 0; text-align: right; }
+
 .assignment { display: grid; gap: 10vw; grid-template-columns: .8fr 1.2fr; }
 .assignmentCopy { position: sticky; top: 130px; align-self: start; }
 .assignmentCopy h2 { margin-bottom: 26px; }
@@ -254,6 +275,7 @@ footer p { color: #8ca0a5; font-size: 10px; }
   .courseGrid { grid-template-columns: 1fr; }
   .course.featured { grid-column: auto; }
   .course { align-items: start; flex-direction: column; gap: 24px; }
+  .distributionPanel { grid-template-columns: 1fr; padding: 30px; }
   .assignmentCopy { position: static; }
   .earnings { grid-template-columns: 1fr; padding: 60px 24px; }
   .earnings article { border-left: 0; border-top: 1px solid rgba(255,255,255,.25); padding: 20px 0 0; }
@@ -270,6 +292,19 @@ footer p { color: #8ca0a5; font-size: 10px; }
   .seal { right: -10px; }
   .course { min-height: 0; padding: 28px 22px; }
   .featured .price strong { font-size: 38px; }
+  .feeTableWrap { border: 0; overflow: visible; }
+  .feeTable, .feeTable tbody { display: block; }
+  .feeTable thead { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+  .feeTable tr { border: 1px solid var(--line); display: grid; grid-template-columns: 92px 1fr; margin-bottom: 12px; }
+  .feeTable tbody th { align-items: center; display: flex; grid-row: 1 / 4; justify-content: center; }
+  .feeTable tbody td { align-items: center; display: flex; justify-content: space-between; padding: 13px 16px; text-align: right; }
+  .feeTable tbody td::before { color: var(--muted); content: attr(data-label); font-size: 10px; font-weight: 700; }
+  .feeTable tbody td:nth-of-type(1)::before { content: "報酬"; }
+  .feeTable tbody td:nth-of-type(2)::before { content: "所要時間"; }
+  .feeTable tbody td:nth-of-type(3)::before { content: "筆記採点"; }
+  .feeTable tr:last-child th, .feeTable tr:last-child td { border-bottom: 1px solid var(--line); }
+  .distributionRules { grid-template-columns: 1fr; }
+  .distributionPanel { padding: 26px 20px; }
   .startSteps { grid-template-columns: 1fr; }
   .startSteps li { min-height: 0; }
 }

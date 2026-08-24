@@ -267,6 +267,55 @@ export default function Home() {
         <p className="payment">お支払い：銀行振込 または クレジットカード</p>
       </section>
 
+      <section className="section compensation" aria-labelledby="compensation-heading">
+        <div className="sectionLabel">GRADING FEES &amp; WORKLOAD</div>
+        <div className="sectionHeading compensationHeading">
+          <h2 id="compensation-heading">採点報酬と、<br />所要時間の目安。</h2>
+          <p>
+            一般朗読採点者資格で担当する4級〜2級の報酬です。
+            いずれの級も筆記試験の採点はなく、音声を聴いて採点します。
+          </p>
+        </div>
+
+        <div className="feeTableWrap">
+          <table className="feeTable">
+            <thead>
+              <tr>
+                <th scope="col">対象級</th>
+                <th scope="col">1件あたりの採点報酬</th>
+                <th scope="col">所要時間の目安</th>
+                <th scope="col">筆記試験の採点</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">4級</th><td><strong>400円</strong></td><td>約10分</td><td>なし</td></tr>
+              <tr><th scope="row">3級</th><td><strong>600円</strong></td><td>約15〜17分</td><td>なし</td></tr>
+              <tr><th scope="row">準2級</th><td><strong>700円</strong></td><td>約18〜20分</td><td>なし</td></tr>
+              <tr><th scope="row">2級</th><td><strong>700円</strong></td><td>約18〜20分</td><td>なし</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p className="feeNote">※所要時間は目安です。音声や採点内容により異なります。採点件数・報酬総額を保証するものではありません。</p>
+
+        <div className="distributionPanel">
+          <div className="distributionIntro">
+            <span>ASSIGNMENT FLOW</span>
+            <h3>基本は5件ずつ。<br />無理のない件数に調整します。</h3>
+            <p>
+              採点専任者用のGoogleドライブ共有フォルダで配布し、完了後に次の課題をお渡しします。
+              採点者の負担と、結果を待つ受検者の双方に配慮した仕組みです。
+            </p>
+          </div>
+          <div className="distributionRules" aria-label="採点課題の配布ルール">
+            <article><strong>5件を3日以内に完了</strong><span>次回も5件</span></article>
+            <article><strong>完了まで7日以上</strong><span>次回は3件</span></article>
+            <article><strong>3件を3日以内に完了</strong><span>次回は4件</span></article>
+            <article><strong>4件を3日以内に完了</strong><span>次回は5件</span></article>
+          </div>
+        </div>
+        <p className="distributionLimit">1回あたりの配布上限は5件です。</p>
+      </section>
+
       <section className="section assignment">
         <div className="assignmentCopy">
           <div className="sectionLabel">ASSIGNMENT POLICY</div>
@@ -279,16 +328,6 @@ export default function Home() {
           <li><span>03</span><div><h3>ローテーション</h3><p>特定の方に集中しないよう、順番に割り振ります。</p></div></li>
           <li><span>04</span><div><h3>実績加点</h3><p>採点精度と提出速度が高い方は、優先度が上がります。</p></div></li>
         </ol>
-      </section>
-
-      <section className="earnings">
-        <div>
-          <p className="eyebrow">EARNING EXAMPLES</p>
-          <h2>採点料の目安</h2>
-        </div>
-        <article><span>朗読検定 3級</span><strong>20件で 12,000円</strong><small>1件あたり約15分</small></article>
-        <article><span>読み聞かせ検定 初級</span><strong>10件で 6,000円</strong><small>1件あたり約20分</small></article>
-        <p className="earnNote">採点料・依頼件数・作業時間は、資格、時期、採点の正確性・効率によって異なります。</p>
       </section>
 
       <section className="section faq" id="faq">
