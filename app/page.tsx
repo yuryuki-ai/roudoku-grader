@@ -94,7 +94,19 @@ const faqs = [
   },
 ];
 
+const recruitmentOpen = false;
+
 export default function Home() {
+  if (!recruitmentOpen) {
+    return (
+      <main className="section">
+        <p className="eyebrow">日本朗読検定協会</p>
+        <h1 className="text-3xl font-semibold">検定採点者の募集について</h1>
+        <p className="lead">募集定員に達したため、現在は募集いたしておりません。</p>
+      </main>
+    );
+  }
+
   return (
     <main>
       <header className="siteHeader">
